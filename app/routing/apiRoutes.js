@@ -1,7 +1,7 @@
 var express = require("express");
 var apiRouter = express.Router();
 
-var friendsData = require("../data/friends");
+var friendsData = require("../data/friend");
 
 // API GET Requests and Response back a JSON array of objects
 apiRouter.get("/api/friends", function(req, res) {

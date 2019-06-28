@@ -5,8 +5,8 @@ var path = require("path");
 // HTML GET Requests
 // Below code handles when users "visit" a page.
 // In each of the below cases the user is shown an HTML page of content
-htmlRouter.get('/home', function (req, res) {
-  res.sendFile("home.html", {root: path.join('./app/public')});
+htmlRouter.get('/index', function (req, res) {
+  res.sendFile("index.html", {root: path.join('./app/public')});
 });
 
 htmlRouter.get('/survey', function (req, res) {
@@ -15,7 +15,7 @@ htmlRouter.get('/survey', function (req, res) {
 
 // If no matching route is found default to home
 htmlRouter.get("*", function(req, res) {
-  res.sendFile("home.html", {root: path.join('./app/public')});
+  res.sendFile("index.html", {root: path.join('./app/public')});
 });
 
 module.exports = htmlRouter;
