@@ -30,6 +30,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+app.use(express.static("app/public"));
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
